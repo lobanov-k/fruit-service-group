@@ -23,7 +23,6 @@ class App extends Component {
 	}
 
 	render() {
-		console.log(this.state);
 		return (
 			<LanguageProvider lang={this.state.lang}>
 				<div className="mainContainer">
@@ -35,7 +34,7 @@ class App extends Component {
 	}
 
 	handleLangChange = (lang) => {
-		this.setState({lang: lang});
+		this.setState({lang});
 	}
 }
 
