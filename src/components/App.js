@@ -5,7 +5,7 @@ import Header from './Header';
 import Hero from './Hero';
 import LanguageProvider from './LanguageProvider';
 
-class Root extends Component {
+class App extends Component {
 	static propTypes = {};
 
 	static childContextTypes = {
@@ -39,4 +39,4 @@ class Root extends Component {
 	}
 }
 
-export default Root;
+export default App;

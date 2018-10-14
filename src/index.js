@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './less/main.less';
-import Root from './components/Root';
+import App from './components/App';
 
-ReactDOM.render(<Root />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
 
 module.hot.accept();
