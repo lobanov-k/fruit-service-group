@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {Provider} from 'react-redux';
 import Header from './Header';
 import Hero from './Hero';
 import LanguageProvider from './LanguageProvider';
 
 class App extends Component {
-	static propTypes = {};
-
 	static childContextTypes = {
 		lang: PropTypes.string,
 	};
@@ -22,6 +19,10 @@ class App extends Component {
 		};
 	}
 
+	handleLangChange = (lang) => {
+		this.setState({lang});
+	}
+
 	render() {
 		return (
 			<LanguageProvider lang={this.state.lang}>
@@ -31,10 +32,6 @@ class App extends Component {
 				</div>
 			</LanguageProvider>
 		);
-	}
-
-	handleLangChange = (lang) => {
-		this.setState({lang});
 	}
 }
 
