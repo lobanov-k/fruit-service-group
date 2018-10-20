@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import dictionary from '../text-configs/hero';
+import dictionary from '../text-configs/dictionary';
 
 class Translator extends Component {
     static propTypes = {
