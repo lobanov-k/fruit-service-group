@@ -1,0 +1,94 @@
+@import "variables";
+@import "mixins";
+
+header {
+  color: @colorLight;
+  background-color: rgba(255, 255, 255, 0.38);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  .flex-display();
+  .justify-content(space-between);
+
+  .logoBlock {
+    background-color: @colorLight;
+  }
+
+  .logo {
+    padding: 27px 14px 21px 27px;
+    display: block;
+
+    img {
+      height: 50px;
+      width: auto;
+    }
+  }
+
+  nav {
+    .flex-display();
+
+    ul {
+      .flex-display();
+    }
+
+    li {
+      list-style-type: none;
+      padding: 5px 17px;
+      .flex-display();
+      .align-items(center);
+    }
+
+    a {
+      color: @colorLight;
+      text-decoration: none;
+      .font(16px, 1.1, bold);
+
+      &:hover {
+        color: @colorLinkAlt;
+      }
+    }
+  }
+
+  .langSelect {
+    cursor: pointer;
+
+    .langSelect__control {
+      background: transparent;
+      border: none !important;
+      box-shadow: none;
+    }
+
+    .langSelect__value-container {
+      width: 40px;
+    }
+
+    .langSelect__single-value {
+      color: @colorLight;
+    }
+
+    .langSelect__indicator-separator {
+      display: none;
+    }
+
+    .langSelect__dropdown-indicator svg {
+      fill: @colorLight;
+    }
+
+    .langSelect__menu {
+      background-color: rgba(255, 255, 255, 0.38);
+    }
+
+    .langSelect__option {
+      opacity: 0.7;
+      background-color: transparent;
+    }
+    .langSelect__option--is-focused {
+      opacity: 1;
+    }
+    .langSelect__option--is-selected {
+      opacity: 1;
+    }
+  }
+}
