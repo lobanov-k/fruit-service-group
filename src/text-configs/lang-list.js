@@ -1,3 +1,4 @@
-export default [
-	"ru", "en"
-];
+export default {
+	"ru": "Rus",
+	"en": "Eng"
+};

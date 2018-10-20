@@ -1,11 +1,11 @@
 export default {
   "hero-carousel-header": {
-    "ru": "Fruit Service",
+    "ru": "Fruit Service Group",
     "en": "Fruit Service Group"
   },
   "hero-carousel-subheader": {
     "ru": "Оптовые поставки и газация фруктов и овощей",
-    "en": ""
+    "en": "opt postavki"
   },
   "connect": {
     "ru": "Связаться",
@@ -34,5 +34,21 @@ export default {
   "hero-features-6": {
     "ru": "Высочайшее качество",
     "en": ""
+  },
+  "header-about": {
+    "ru": "О Компании",
+    "en": "About"
+  },
+  "header-product": {
+    "ru": "Продукция",
+    "en": "Product"
+  },
+  "header-services": {
+    "ru": "Услуги",
+    "en": "Services"
+  },
+  "header-contacts": {
+    "ru": "Контакты",
+    "en": "Contacts"
   }
 }
