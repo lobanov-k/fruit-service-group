@@ -13,6 +13,26 @@ class Header extends Component {
 		this.props.handleLangChange(selected.value);
 	};
 
+	state = {
+		isScrolled: false
+	};
+
+	componentDidMount() {
+		if (window.scrollY > 0) {
+			this.setState({isScrolled: true});
+		}
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 0) {
+				console.log(this);
+				if (this.state.isScrolled) return;
+				this.setState({isScrolled: true});
+			} else {
+				if (!this.state.isScrolled) return;
+				this.setState({isScrolled: false});
+			}
+		});
+	};
+
 	render() {
 		const langList = Object.keys(localeList).map(value => (
 			{
@@ -24,7 +44,7 @@ class Header extends Component {
 		const { selected } = this.props;
 
 		return(
-			<header>
+			<header id="header" className={(this.state.isScrolled) ? "pinned" : ""}>
 				<div className="logoBlock">
 					<a href="/" className="logo">
 						<img src="images/fruit-service-group-logo-min.png" alt="Fruit Service Group"/>

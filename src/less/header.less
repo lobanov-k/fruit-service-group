@@ -11,6 +11,19 @@ header {
   z-index: 3;
   .flex-display();
   .justify-content(space-between);
+  transition: all 0.5s ease-in-out;
+
+  &.pinned {
+    background-color: rgba(255, 255, 255, 1);
+
+    a {
+      color: @colorGreen;
+    }
+
+    .langSelect__single-value {
+      color: @colorGreen;
+    }
+  }
 
   .logoBlock {
     background-color: @colorLight;
@@ -44,6 +57,7 @@ header {
       color: @colorLight;
       text-decoration: none;
       .font(16px, 1.1, bold);
+      transition: color 0.5s ease-in-out;
 
       &:hover {
         color: @colorLinkAlt;
@@ -53,44 +67,48 @@ header {
 
   .langSelect {
     cursor: pointer;
+  }
+  .langSelect__control {
+    background: transparent;
+    border: none !important;
+    box-shadow: none;
+  }
 
-    .langSelect__control {
-      background: transparent;
-      border: none !important;
-      box-shadow: none;
-    }
+  .langSelect__value-container {
+    width: 40px;
+  }
 
-    .langSelect__value-container {
-      width: 40px;
-    }
+  .langSelect__single-value {
+    color: @colorLight;
+    transition: color 0.5s ease-in-out;
 
-    .langSelect__single-value {
-      color: @colorLight;
+    header.pinned & {
+      color: @colorGreen;
     }
+  }
 
-    .langSelect__indicator-separator {
-      display: none;
-    }
+  .langSelect__indicator-separator {
+    display: none;
+  }
 
-    .langSelect__dropdown-indicator svg {
-      fill: @colorLinkAlt;
-    }
+  .langSelect__dropdown-indicator svg {
+    fill: @colorLinkAlt;
+  }
 
-    .langSelect__menu {
-      background-color: rgba(255, 255, 255, 0.38);
-    }
+  .langSelect__menu {
+    background-color: rgba(255, 255, 255, 0.38);
+  }
 
-    .langSelect__option {
-      opacity: 0.7;
-      background-color: transparent;
-    }
+  .langSelect__option {
+    opacity: 0.7;
+    background-color: transparent;
+  }
 
-    .langSelect__option--is-focused {
-      opacity: 1;
-    }
+  .langSelect__option--is-focused {
+    opacity: 1;
+  }
 
-    .langSelect__option--is-selected {
-      opacity: 1;
-    }
+  .langSelect__option--is-selected {
+    opacity: 1;
   }
 }
