@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Header from './Header';
 import Hero from './Hero';
 import LanguageProvider from './LanguageProvider';
+import CompanyBlock from './CompanyBlock';
 
 class App extends Component {
 	static childContextTypes = {
@@ -29,6 +30,7 @@ class App extends Component {
 				<div className="mainContainer">
 					<Header handleLangChange = {this.handleLangChange}/>
 					<Hero/>
+					<CompanyBlock/>
 				</div>
 			</LanguageProvider>
 		);
