@@ -40,8 +40,8 @@ class Hero extends Component {
                 <Slider {...carouselSettings} >
                     {
                         bgImages.map(img => (
-                            <div>
-                                <div key={img}
+                            <div key={img}>
+                                <div
                                     className="heroCarouselItem" 
                                     style={{backgroundImage: `url('images/hero-bg/${img}')`}}>
                                 </div>
