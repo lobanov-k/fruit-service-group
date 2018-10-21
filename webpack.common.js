@@ -47,7 +47,11 @@ module.exports = {
                 }]
             },
             { 
-                test: /\.(gif|eot|ttf|svg)$/, 
+                test: /font.*\.(eot|ttf|svg)$/, 
+                loader: 'url-loader'
+            },
+            {
+                test: /\.gif/,
                 loader: 'url-loader'
             }
         ]
@@ -60,9 +64,5 @@ module.exports = {
         publicPath: '/',
         filename: 'bundle.js'
     },
-    plugins: pluginsArray,
-    devServer: {
-        contentBase: './dist',
-        hot: true
-    }
+    plugins: pluginsArray
 };
