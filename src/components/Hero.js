@@ -26,10 +26,6 @@ class Hero extends Component {
         return (
             <div className="hero">
                 <div className="container">
-                    <div className="carouselControls">
-                        <div className="prev"></div>
-                        <div className="next"></div>
-                    </div>
                     <h2><Translator>hero-carousel-subheader</Translator></h2>
                     <h1><Translator>hero-carousel-header</Translator></h1>
                     <button className="connectBtn">
