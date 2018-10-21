@@ -23,7 +23,6 @@ class Header extends Component {
 		}
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > 0) {
-				console.log(this);
 				if (this.state.isScrolled) return;
 				this.setState({isScrolled: true});
 			} else {
