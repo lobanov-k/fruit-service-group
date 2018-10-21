@@ -1,0 +1,33 @@
+@import "variables";
+@import "mixins";
+
+.infoBlock {
+  color: @colorLight;
+  .font(16px, 23px);
+  .flex-display();
+
+  .contentBlock {
+    .flex-basis(515px);
+    min-width: 515px;
+    padding: 73px 28px 27px 70px;
+  }
+
+  .textBlock {
+    margin-bottom: 40px;
+  }
+
+  .svgRow {
+    .flex-display();
+    img {
+      max-height: 40px;
+      width: auto;
+      margin-right: 30px;
+    }
+  }
+
+  .imageBg {
+    .flex-basis(71%);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
