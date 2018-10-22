@@ -3,13 +3,19 @@
 
 .hero {
   background-color: #a79f67;
-  padding-top: 270px;
+  padding-top: 200px;
   color: @colorLight;
   position: relative;
 
   h1 {
     .font(53px, 1);
     font-family: @fontFamilyAharoni;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    .font(30px, 1);
   }
 
   .container {
@@ -64,5 +70,30 @@
       height: auto;
       margin-bottom: 10px;
     }
+  }
+
+  .contacts {
+    .flex-display();
+    .flex-direction(column);
+
+    a {
+      color: @colorLight;
+      text-decoration: none;
+      .font(23px, 1.5, lighter);
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero {
+    padding-top: 100px;
+  }
+  .heroFeaturesBlock {
+    margin-top: 50px;
+  }
+  .heroFeatures:nth-child(4),
+  .heroFeatures:nth-child(5),
+  .heroFeatures:nth-child(6) {
+    display: none;
   }
 }
