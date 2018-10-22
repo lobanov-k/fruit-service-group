@@ -75,4 +75,16 @@ export default {
     "ru": "Наличие самого современного оборудования  и  соблюдение всех правил хранения обеспечивает высокое качество поставляемых товаров.",
     "en": "Get more"
   },
+  "product-head": {
+    "ru": "Продукция",
+    "en": "Product"
+  },
+  "product-text-1": {
+    "ru": "Мы предлагаем широкий ассортимент фруктов и овощей.",
+    "en": "We offer a wide selection of fruit and vegetables."
+  },
+  "product-text-2": {
+    "ru": "Наши поставщики - крупнейшие производители и экспортеры из разных стран мира.",
+    "en": " Our comprehensive list of suppliers includes some of the largest producers and exporters from all the world."
+  },
 }
