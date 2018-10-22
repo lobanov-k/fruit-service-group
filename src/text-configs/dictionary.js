@@ -5,7 +5,7 @@ export default {
   },
   "hero-carousel-subheader": {
     "ru": "Оптовые поставки и газация фруктов и овощей",
-    "en": "opt postavki"
+    "en": "Freight forwarding and customs clearance services"
   },
   "connect": {
     "ru": "Связаться",
@@ -13,27 +13,27 @@ export default {
   },
   "hero-features-1": {
     "ru": "Выгодные цены",
-    "en": "Connect"
+    "en": "Competitive prices"
   },
   "hero-features-2": {
     "ru": "Широкий ассортимент",
-    "en": ""
+    "en": "A large variety of fruit and vegetables available"
   },
   "hero-features-3": {
     "ru": "Оперативная обработка и исполнение заказа",
-    "en": ""
+    "en": "Prompt processing, completion and shipping of your order"
   },
   "hero-features-4": {
     "ru": "Своевременная доставка",
-    "en": ""
+    "en": "Quick delivery"
   },
   "hero-features-5": {
     "ru": "Индивидуальный подход к каждому клиенту",
-    "en": ""
+    "en": "Services tailored for each individual customer"
   },
   "hero-features-6": {
     "ru": "Высочайшее качество",
-    "en": ""
+    "en": "High quality of products"
   },
   "header-about": {
     "ru": "О Компании",
@@ -57,7 +57,7 @@ export default {
   },
   "company-text-main": {
     "ru": "FSG - надежный поставщик фруктов и овощей. Мы поставляем самые свежие фрукты и овощи неизменно отличного качества. Основная деятельность компании - оптовая продажа бананов по всей Украине. ",
-    "en": "Our Company"
+    "en": "FSG is one of the first companies in Ukraine to provide a comprehensive range of services for the ripening of fruit and vegetables. One of the main emphases is the provision of ripening bananas."
   },
   "company-more": {
     "ru": "Узнать больше",
