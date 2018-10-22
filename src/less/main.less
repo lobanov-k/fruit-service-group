@@ -24,6 +24,35 @@ body {
   padding: 0 46px;
 }
 
+.heading {
+  color: @colorGreen;
+  font-family: @fontFamilyAharoni;
+  .font(36px, 1, bold);
+  padding-bottom: 23px;
+  position: relative;
+
+  &:after {
+    position: relative;
+    content: "";
+    width: 306px;
+    height: 1px;
+    background-color: @colorGreen;
+    display: block;
+    margin: 24px auto 0;
+  }
+
+  &:before {
+    position: relative;
+    content: "";
+    width: 170px;
+    height: 1px;
+    background-color: @colorGreen;
+    display: block;
+    bottom: -84px;
+    margin: 0 auto;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .container {
     padding: 0 10px;
@@ -34,3 +63,4 @@ body {
 @import "hero";
 @import "company";
 @import "info-block";
+@import "text-block";
