@@ -87,4 +87,48 @@ export default {
     "ru": "Наши поставщики - крупнейшие производители и экспортеры из разных стран мира.",
     "en": " Our comprehensive list of suppliers includes some of the largest producers and exporters from all the world."
   },
+  "banana": {
+    "ru": "Банан",
+    "en": "Banana"
+  },
+  "avocado": {
+    "ru": "Авокадо",
+    "en": "Avocado"
+  },
+  "kiwi": {
+    "ru": "Киви",
+    "en": "Kiwi"
+  },
+  "orange": {
+    "ru": "Апельсин",
+    "en": "Orange"
+  },
+  "pepper": {
+    "ru": "Перец",
+    "en": "Pepper"
+  },
+  "pomegranate": {
+    "ru": "Гранат",
+    "en": "Pomegranate"
+  },
+  "tomato": {
+    "ru": "Помидор",
+    "en": "Tomato"
+  },
+  "learn-more": {
+    "ru": "Узнать больше  >>",
+    "en": "Learn more  >>"
+  },
+  "all-products": {
+    "ru": "Вся продукция",
+    "en": "All"
+  },
+  "fruits": {
+    "ru": "Фрукты",
+    "en": "Fruits"
+  },
+  "vegetables": {
+    "ru": "Овощи",
+    "en": "Vegetables"
+  },
 }
