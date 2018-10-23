@@ -115,6 +115,18 @@ export default {
     "ru": "Помидор",
     "en": "Tomato"
   },
+  "mandarin": {
+    "ru": "Мандарин",
+    "en": "Mandarin"
+  },
+  "lemon": {
+    "ru": "Лемон",
+    "en": "Lemon"
+  },
+  "grapefruit": {
+    "ru": "Грейпфрут",
+    "en": "Grapefruit"
+  },
   "learn-more": {
     "ru": "Узнать больше  >>",
     "en": "Learn more  >>"
@@ -130,5 +142,17 @@ export default {
   "vegetables": {
     "ru": "Овощи",
     "en": "Vegetables"
+  },
+  "services": {
+    "ru": "Услуги",
+    "en": "Services"
+  },
+  "services-text-1": {
+    "ru": "FSG одна из первых компаний в Украине, которая предоставляет комплексный спектр услуг по дозреванию фруктов и овощей.",
+    "en": "FSG is one of the first companies in Ukraine to provide a comprehensive range of services for the ripening of fruit and vegetables."
+  },
+  "services-text-2": {
+    "ru": "Одним из основных направлений является услуга по газация бананов.",
+    "en": "One of the main emphases is the provision of ripening bananas."
   },
 }

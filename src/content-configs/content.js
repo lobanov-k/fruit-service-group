@@ -5,3 +5,11 @@ export const svgSet1 = [
     '../images/svg/015-pomegranate.svg',
     '../images/svg/019-kiwi.svg'
 ];
+
+export const svgSet2 = [
+    '../images/svg/041-banana.svg',
+    '../images/svg/041-banana.svg',
+    '../images/svg/041-banana.svg',
+    '../images/svg/041-banana.svg',
+    '../images/svg/041-banana.svg'
+];
