@@ -21,9 +21,10 @@ export default class ProductCarousel extends React.Component {
 	render() {
 		const sliderSettings = {
 			speed: 500,
-			slidesToShow: 4,
+			slidesToShow: 6,
 			className: "container",
-			infinite: false
+			infinite: false,
+			arrows: true
 		};
 
 		return (
@@ -52,14 +53,16 @@ export default class ProductCarousel extends React.Component {
 						productList.map((item) => {
 							if (this.state.activeFilter == "all" || this.state.activeFilter == item.category)
 							return(
-								<div className="productItem" key={item.textWildcard}>
-									<div className="productImgBlock">
-										<img src={item.img} alt={item.textWildcard}/>
-									</div>
-									<div className="productNameBlock">
-										<Translator>{item.textWildcard}</Translator>
-										<div className="productItemMore">
-											<Translator>get-more</Translator>
+								<div key={item.textWildcard}>
+									<div className="productItem">
+										<div className="productImgBlock">
+											<img src={item.img} alt={item.textWildcard}/>
+										</div>
+										<div className="productNameBlock">
+											<Translator>{item.textWildcard}</Translator>
+											<div className="productItemMore">
+												<Translator>learn-more</Translator>
+											</div>
 										</div>
 									</div>
 								</div>
