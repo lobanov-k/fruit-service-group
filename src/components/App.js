@@ -7,6 +7,7 @@ import Translator from './Translator';
 import CompanyBlock from './CompanyBlock';
 import InfoBlock from './InfoBlock';
 import TextHeadingSection from './TextHeadingSection';
+import ProductCarousel from './ProductCarousel';
 
 import {svgSet1} from '../content-configs/content.js';
 
@@ -49,6 +50,7 @@ class App extends Component {
 							<p><Translator>product-text-2</Translator></p>
 						</div>
 					</TextHeadingSection>
+					<ProductCarousel/>
 				</div>
 			</LanguageProvider>
 		);
