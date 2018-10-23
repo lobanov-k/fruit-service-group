@@ -3,6 +3,7 @@
 
 .productCarousel {
   padding-top: 20px;
+  padding-bottom: 20px;
 
   .filterBlock {
     .flex-display();
@@ -19,20 +20,44 @@
     border: 1px solid @colorYellow;
     border-radius: 5px;
     margin-right: 44px;
+    vertical-align: middle;
+    cursor: pointer;
 
     &.selected {
       background-color: @colorYellow;
       color: @colorLight;
-      transition: all 0.3s ease-in-out;
+      font-weight: bold;
+      transition: all 0.2s ease-in-out;
     }
+  }
+
+  .slick-slider {
+    margin-top: 70px;
+  }
+
+  .slick-track {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .productItem {
     width: 130px;
     padding: 0 20px;
+    cursor: pointer;
 
     & > div {
       background-color: @colorGray;
+    }
+
+    &:hover {
+      .productNameBlock {
+        background-color: @colorGreenLighter;
+        color: @colorLight;
+      }
+
+      .productItemMore {
+        opacity: 1;
+      }
     }
   }
 
@@ -41,11 +66,37 @@
     padding-top: 80px;
     padding-bottom: 16px;
     .justify-content(center);
+    border: 1px solid #F4F2EC;
 
     img {
       width: 110px;
       height: auto;
       margin: 0 auto;
     }
+  }
+
+  .productNameBlock {
+    height: 95px;
+    position: relative;
+    border: 1px solid #F4F2EC;
+    .font(16px, 18px, bold);
+    font-family: @fontFamilyAharoni;
+    color: @colorGreen;
+    .flex-display();
+    .justify-content(center);
+    .align-items(center);
+  }
+
+  .productItemMore {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: @colorLight;
+    .font(9px, 10px, bold);
+    text-align: center;
+    opacity: 0;
+    padding-bottom: 8px;
+    padding-top: 6px;
+    border-top: 1px solid @colorLight;
   }
 }
