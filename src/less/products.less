@@ -1,0 +1,51 @@
+@import "variables";
+@import "mixins";
+
+.productCarousel {
+  padding-top: 20px;
+
+  .filterBlock {
+    .flex-display();
+    padding-bottom: 18px;
+    border-bottom: 1px solid #ebe7de;
+  }
+
+  .filterBtn {
+    background-color: @colorLight;
+    height: 34px;
+    width: 150px;
+    color: @colorGreenDark;
+    .font(14px, 34px);
+    border: 1px solid @colorYellow;
+    border-radius: 5px;
+    margin-right: 44px;
+
+    &.selected {
+      background-color: @colorYellow;
+      color: @colorLight;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .productItem {
+    width: 130px;
+    padding: 0 20px;
+
+    & > div {
+      background-color: @colorGray;
+    }
+  }
+
+  .productImgBlock {
+    height: 180px;
+    padding-top: 80px;
+    padding-bottom: 16px;
+    .justify-content(center);
+
+    img {
+      width: 110px;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+}
