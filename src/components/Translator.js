@@ -16,6 +16,11 @@ class Translator extends Component {
             console.error('Translator needs string children', 'Property passed:', this.props.children);
             return ( this.props.children );
         }
+        
+        if (!dictionary[this.props.children]) {
+            console.error('No entry in dictionary', 'Property passed:', this.props.children);
+            return ( this.props.children );
+        }
 
         return (
             <span>
