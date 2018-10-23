@@ -10,7 +10,7 @@ export default function ImageParallax(props) {
 		<React.Fragment>
 			<div 
 				className="parallaxImage"
-				style={{backgroundImage: props.image}}
+				style={{backgroundImage: `url('${props.image}')`}}
 			/>
 		</React.Fragment>
 	);
