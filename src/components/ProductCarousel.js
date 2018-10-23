@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from "react-slick";
-import {productCategories} from '../content-configs/product-carousel';
+import {productCategories, productList} from '../content-configs/product-carousel';
 import Translator from './Translator';
 
 const propTypes = {};
@@ -14,20 +14,59 @@ export default class ProductCarousel extends React.Component {
 		activeFilter: "all"
 	};
 
-	changeFilter(category) {
+	changeFilter = (category) => () => {
 		this.setState({activeFilter: category});
-	}
+	};
 
 	render() {
+		const sliderSettings = {
+			speed: 500,
+			slidesToShow: 4,
+			className: "container",
+			infinite: false
+		};
+
 		return (
 			<div className="productCarousel">
-				<div className="filterBlock">
+				<div className="filterBlock container">
+					<button 
+						className={`filterBtn ${this.state.activeFilter == "all" ? "selected" : ""}`} 
+						onClick={this.changeFilter("all")}
+					>
+						<Translator>all-products</Translator>
+					</button>
+				{
 					productCategories.map((item) => (
-						<button className="filterBtn" >
+						<button 
+							className={`filterBtn ${this.state.activeFilter == item.name ? "selected" : ""}`} 
+							key={item.name} 
+							onClick={this.changeFilter(item.name)}
+						>
 							<Translator>{item.textWildcard}</Translator>
 						</button>
 					))
+				}
 				</div>
+				<Slider {...sliderSettings}>
+					{
+						productList.map((item) => {
+							if (this.state.activeFilter == "all" || this.state.activeFilter == item.category)
+							return(
+								<div className="productItem" key={item.textWildcard}>
+									<div className="productImgBlock">
+										<img src={item.img} alt={item.textWildcard}/>
+									</div>
+									<div className="productNameBlock">
+										<Translator>{item.textWildcard}</Translator>
+										<div className="productItemMore">
+											<Translator>get-more</Translator>
+										</div>
+									</div>
+								</div>
+							)
+						})
+					}
+				</Slider>
 			</div>
 		);
 	}
