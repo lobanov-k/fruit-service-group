@@ -8,8 +8,9 @@ import CompanyBlock from './CompanyBlock';
 import InfoBlock from './InfoBlock';
 import TextHeadingSection from './TextHeadingSection';
 import ProductCarousel from './ProductCarousel';
+import ImageParallax from './ImageParallax';
 
-import {svgSet1} from '../content-configs/content.js';
+import {svgSet1, svgSet2} from '../content-configs/content.js';
 
 class App extends Component {
 	static childContextTypes = {
@@ -51,6 +52,17 @@ class App extends Component {
 						</div>
 					</TextHeadingSection>
 					<ProductCarousel/>
+					<ImageParallax image="/images/content/2.png"/>
+					<TextHeadingSection>
+						<h3 className="heading">
+							<Translator>services</Translator>
+						</h3>
+					</TextHeadingSection>
+					<InfoBlock svgArray={svgSet2} bgColor="#547A31" bgImage="/images/content/1.jpg">
+						<div className="textBlock"><Translator>services-text-1</Translator></div>
+						<div className="textBlock"><Translator>services-text-2</Translator></div>
+					</InfoBlock>
+					<TextHeadingSection/>
 				</div>
 			</LanguageProvider>
 		);
