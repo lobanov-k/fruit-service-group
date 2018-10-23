@@ -16,7 +16,7 @@
     height: 34px;
     width: 150px;
     color: @colorGreenDark;
-    .font(14px, 34px);
+    .font(14px, 30px);
     border: 1px solid @colorYellow;
     border-radius: 5px;
     margin-right: 44px;
@@ -62,11 +62,11 @@
   }
 
   .productImgBlock {
-    height: 180px;
     padding-top: 80px;
+    height: 120px;
     padding-bottom: 16px;
     .justify-content(center);
-    border: 1px solid #F4F2EC;
+    border: 1px solid #f4f2ec;
 
     img {
       width: 110px;
@@ -78,7 +78,7 @@
   .productNameBlock {
     height: 95px;
     position: relative;
-    border: 1px solid #F4F2EC;
+    border: 1px solid #f4f2ec;
     .font(16px, 18px, bold);
     font-family: @fontFamilyAharoni;
     color: @colorGreen;
@@ -98,5 +98,10 @@
     padding-bottom: 8px;
     padding-top: 6px;
     border-top: 1px solid @colorLight;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: @colorGreen;
   }
 }
