@@ -9,6 +9,8 @@ import InfoBlock from './InfoBlock';
 import TextHeadingSection from './TextHeadingSection';
 import ProductCarousel from './ProductCarousel';
 import ImageParallax from './ImageParallax';
+import Columns from './Columns';
+import TextSection from './TextSection';
 
 import {svgSet1, svgSet2} from '../content-configs/content.js';
 
@@ -63,6 +65,38 @@ class App extends Component {
 						<div className="textBlock"><Translator>services-text-2</Translator></div>
 					</InfoBlock>
 					<TextHeadingSection/>
+					<Columns title={<Translator>services-column-title</Translator>}>
+						<div className="columnText">
+							<Translator>services-column-text-1</Translator>
+							<Translator>services-column-text-2</Translator>
+							<Translator>services-column-text-3</Translator>
+							<Translator>services-column-text-4</Translator>
+							<button className="yellowBtn">
+								<Translator>company-more</Translator>
+							</button>
+						</div>
+						<div className="imagesColBlock">
+							<div className="imgBlock" style={{backgroundImage: "url('/images/content/8.jpg')"}}/>
+							<div className="imgBlock" style={{backgroundImage: "url('/images/content/7.jpg')"}}/>
+						</div>
+					</Columns>
+					<TextSection>
+						<h3 className="subheader">
+							<Translator>services-transport-header</Translator>
+						</h3>
+						<div className="text">
+							<Translator>services-column-text-1</Translator>
+						</div>
+						<div className="text">
+							<Translator>services-column-text-2</Translator>
+						</div>
+						<div className="text">
+							<Translator>services-column-text-3</Translator>
+						</div>
+						<div className="text">
+							<Translator>services-column-text-4</Translator>
+						</div>
+					</TextSection>
 				</div>
 			</LanguageProvider>
 		);
