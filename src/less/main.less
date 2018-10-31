@@ -53,6 +53,15 @@ body {
   }
 }
 
+.yellowBtn {
+  background-color: @colorYellow;
+  color: @colorLight;
+  height: 50px;
+  .font(18px, 50px, bold);
+  border-radius: 5px;
+  padding: 0 44px;
+}
+
 @media only screen and (max-width: 767px) {
   .container {
     padding: 0 10px;
@@ -66,3 +75,5 @@ body {
 @import "text-block";
 @import "products";
 @import "img-parallax";
+@import "columns";
+@import "text-section";
