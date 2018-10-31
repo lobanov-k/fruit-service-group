@@ -155,4 +155,28 @@ export default {
     "ru": "Одним из основных направлений является услуга по газация бананов.",
     "en": "One of the main emphases is the provision of ripening bananas."
   },
+  "services-column-title": {
+    "ru": "Услуги по дозреванию фруктов и овощей",
+    "en": "We offer a wide selection of fruit and vegetables"
+  },
+  "services-column-text-1": {
+    "ru": "Газация бананов - это процесс искусственного дозревания плодов, который позволяет им приобрести все необходимые свойства и качества: вкус, запах, внутреннюю и внешнюю структуру.",
+    "en": "Aeration of bananas is the process of ripening fruit in a controlled environment, which allows our bananas to acquire all the essential properties and qualities — taste, smell and texture. "
+  },
+  "services-column-text-2": {
+    "ru": "Дозревание происходит в специальных камерах при определенном климатическом режиме.",
+    "en": "This occurs in special greenhouses in a carefully controlled climate."
+  },
+  "services-column-text-3": {
+    "ru": "К вашим услугам 22 современных камеры для дозревания бананов, в которых одновременно могут находиться 24 000 коробок бананов.",
+    "en": "At your service are 22 modern greenhouses for ripening bananas. Which is the equivalent of 24,000 boxes of bananas"
+  },
+  "services-column-text-4": {
+    "ru": "Используя новейшие технологии и обученный высококвалифицированный персонал, мы обеспечим наилучший результат дозревания и хранения ваших фруктов и овощей.",
+    "en": "Using the latest technology and highly trained, fully qualified personnel, we will ensure the best results for the ripening and storage of your fruit and vegetables."
+  },
+  "services-transport-header": {
+    "ru": "Услуги по экспедированию грузов и таможенному оформлению",
+    "en": "Freight forwarding and customs clearance services"
+  },
 }
