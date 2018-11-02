@@ -11,8 +11,11 @@ import ProductCarousel from './ProductCarousel';
 import ImageParallax from './ImageParallax';
 import Columns from './Columns';
 import TextSection from './TextSection';
+import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 
 import {svgSet1, svgSet2} from '../content-configs/content.js';
+
+configureAnchors({offset: -120});
 
 class App extends Component {
 	static childContextTypes = {
@@ -45,9 +48,11 @@ class App extends Component {
 						<div className="textBlock"><Translator>info-block-text-2</Translator></div>
 					</InfoBlock>
 					<TextHeadingSection>
-						<h3 className="heading">
-							<Translator>product-head</Translator>
-						</h3>
+						<ScrollableAnchor id={"product"}>
+							<h3 className="heading">
+								<Translator>product-head</Translator>
+							</h3>
+						</ScrollableAnchor>
 						<div className="text">
 							<p><Translator>product-text-1</Translator></p>
 							<p><Translator>product-text-2</Translator></p>
@@ -56,9 +61,11 @@ class App extends Component {
 					<ProductCarousel/>
 					<ImageParallax image="/images/content/2.png"/>
 					<TextHeadingSection>
-						<h3 className="heading">
-							<Translator>services</Translator>
-						</h3>
+						<ScrollableAnchor id={"services"}>
+							<h3 className="heading">
+								<Translator>services</Translator>
+							</h3>
+						</ScrollableAnchor>
 					</TextHeadingSection>
 					<InfoBlock svgArray={svgSet2} bgColor="#547A31" bgImage="/images/content/1.jpg">
 						<div className="textBlock"><Translator>services-text-1</Translator></div>
@@ -97,6 +104,8 @@ class App extends Component {
 							<Translator>services-column-text-4</Translator>
 						</div>
 					</TextSection>
+					<ImageParallax image="/images/content/5.jpg"/>
+					<TextSection/>
 				</div>
 			</LanguageProvider>
 		);
