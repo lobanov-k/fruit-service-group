@@ -20,8 +20,18 @@ header {
       color: @colorGreen;
     }
 
-    .langSelect__single-value {
-      color: @colorGreen;
+    .langSelect {
+      &__single-value {
+        color: @colorGreen;
+      }
+
+      &__menu {
+        background-color: @colorLight;
+      }
+
+      &__option {
+        color: @colorGreen;
+      }
     }
   }
 
@@ -67,48 +77,45 @@ header {
 
   .langSelect {
     cursor: pointer;
-  }
-  .langSelect__control {
-    background: transparent;
-    border: none !important;
-    box-shadow: none;
-  }
 
-  .langSelect__value-container {
-    width: 40px;
-  }
-
-  .langSelect__single-value {
-    color: @colorLight;
-    transition: color 0.5s ease-in-out;
-
-    header.pinned & {
-      color: @colorGreen;
+    &__control {
+      background: transparent;
+      border: none !important;
+      box-shadow: none;
     }
-  }
 
-  .langSelect__indicator-separator {
-    display: none;
-  }
+    &__value-container {
+      width: 40px;
+    }
 
-  .langSelect__dropdown-indicator svg {
-    fill: @colorLinkAlt;
-  }
+    &__single-value {
+      color: @colorLight;
+      transition: color 0.5s ease-in-out;
+    }
 
-  .langSelect__menu {
-    background-color: rgba(255, 255, 255, 0.38);
-  }
+    &__indicator-separator {
+      display: none;
+    }
 
-  .langSelect__option {
-    opacity: 0.7;
-    background-color: transparent;
-  }
+    &__dropdown-indicator svg {
+      fill: @colorLinkAlt;
+    }
 
-  .langSelect__option--is-focused {
-    opacity: 1;
-  }
+    &__menu {
+      background-color: rgba(255, 255, 255, 0.38);
+    }
 
-  .langSelect__option--is-selected {
-    opacity: 1;
+    &__option {
+      opacity: 0.7;
+      background-color: transparent;
+    }
+
+    &__option--is-focused {
+      opacity: 1;
+    }
+
+    &__option--is-selected {
+      opacity: 1;
+    }
   }
 }
