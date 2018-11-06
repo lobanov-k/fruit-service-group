@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixins";
+@import "../variables";
+@import "../mixins";
 
 header {
   color: @colorLight;
@@ -75,47 +75,50 @@ header {
     }
   }
 
-  .langSelect {
-    cursor: pointer;
+  @media @mediaTabletMobile {
+  }
+}
 
-    &__control {
-      background: transparent;
-      border: none !important;
-      box-shadow: none;
-    }
+.langSelect {
+  cursor: pointer;
 
-    &__value-container {
-      width: 40px;
-    }
+  &__control {
+    background: transparent;
+    border: none !important;
+    box-shadow: none;
+  }
 
-    &__single-value {
-      color: @colorLight;
-      transition: color 0.5s ease-in-out;
-    }
+  &__value-container {
+    width: 40px;
+  }
 
-    &__indicator-separator {
-      display: none;
-    }
+  &__single-value {
+    color: @colorLight;
+    transition: color 0.5s ease-in-out;
+  }
 
-    &__dropdown-indicator svg {
-      fill: @colorLinkAlt;
-    }
+  &__indicator-separator {
+    display: none;
+  }
 
-    &__menu {
-      background-color: rgba(255, 255, 255, 0.38);
-    }
+  &__dropdown-indicator svg {
+    fill: @colorLinkAlt;
+  }
 
-    &__option {
-      opacity: 0.7;
-      background-color: transparent;
-    }
+  &__menu {
+    background-color: rgba(255, 255, 255, 0.38);
+  }
 
-    &__option--is-focused {
-      opacity: 1;
-    }
+  &__option {
+    opacity: 0.7;
+    background-color: transparent;
+  }
 
-    &__option--is-selected {
-      opacity: 1;
-    }
+  &__option--is-focused {
+    opacity: 1;
+  }
+
+  &__option--is-selected {
+    opacity: 1;
   }
 }

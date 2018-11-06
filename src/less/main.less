@@ -1,12 +1,26 @@
 @import "variables";
 @import "fonts";
 
+@import "reset";
 @import "../../node_modules/slick-carousel/slick/slick";
 @import "../../node_modules/slick-carousel/slick/slick-theme";
 
 body {
   font-family: @fontFamilyDefault;
   margin: 0;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
 }
 
 .container {
@@ -30,6 +44,7 @@ body {
   .font(36px, 1, bold);
   padding-bottom: 23px;
   position: relative;
+  margin-bottom: 20px;
 
   &:after {
     position: relative;
@@ -68,12 +83,13 @@ body {
   }
 }
 
-@import "header";
-@import "hero";
-@import "company";
-@import "info-block";
-@import "text-block";
-@import "products";
-@import "img-parallax";
-@import "columns";
-@import "text-section";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/company";
+@import "./components/info-block";
+@import "./components/text-block";
+@import "./components/products";
+@import "./components/img-parallax";
+@import "./components/columns";
+@import "./components/text-section";
+@import "./components/footer";

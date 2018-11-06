@@ -1,0 +1,73 @@
+@import "../variables";
+@import "../mixins";
+
+.footer {
+  background-color: @colorGreenLighter;
+  color: @colorLight;
+  padding: 45px 0 80px;
+  .font(16px, 1.2);
+
+  &__mainWrapper {
+    .flex-display();
+  }
+
+  a {
+    color: @colorLight;
+    text-decoration: none;
+  }
+
+  &__contactsBlock {
+    .flex-display();
+    .flex-wrap(wrap);
+    .justify-content(space-between);
+    .flex-basis(66%);
+    padding-right: 30px;
+  }
+
+  &__phoneLink {
+    margin-left: 5px;
+  }
+
+  &__title {
+    font-weight: bold;
+    margin-bottom: 13px;
+  }
+
+  &__formBlock {
+    .flex-basis(33%);
+  }
+
+  &__socialSvgWrapper {
+    .flex-display();
+    .justify-content(start);
+  }
+
+  &__flexBlock {
+    .flex-basis(280px);
+    margin-bottom: 20px;
+  }
+
+  &__socialLink {
+    &:not(:first-child) {
+      margin-left: 43px;
+    }
+  }
+
+  &__formInput {
+    .font(16px, 1.2);
+    color: #bfbfbf;
+    width: 100%;
+    height: 37px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 10px;
+
+    &--textArea {
+      height: 128px;
+    }
+  }
+
+  &__formBtn {
+    width: 100%;
+  }
+}
