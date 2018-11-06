@@ -60,9 +60,9 @@ export default class ProductCarousel extends React.Component {
 										</div>
 										<div className="productNameBlock">
 											<Translator>{item.textWildcard}</Translator>
-											<div className="productItemMore">
+											<a href="#contacts" className="productItemMore">
 												<Translator>learn-more</Translator>
-											</div>
+											</a>
 										</div>
 									</div>
 								</div>

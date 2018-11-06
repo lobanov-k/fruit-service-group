@@ -28,9 +28,9 @@ class Hero extends Component {
                 <div className="container">
                     <h2><Translator>hero-carousel-subheader</Translator></h2>
                     <h1><Translator>hero-carousel-header</Translator></h1>
-                    <button className="connectBtn">
+                    <a href="#contacts" className="connectBtn btn">
                         <Translator>connect</Translator>
-                    </button>
+                    </a>
                     <FeaturesBlock></FeaturesBlock>
                 </div>
                 <Slider {...carouselSettings} >
