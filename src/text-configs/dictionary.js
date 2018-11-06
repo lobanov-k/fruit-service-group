@@ -179,4 +179,80 @@ export default {
     "ru": "Услуги по экспедированию грузов и таможенному оформлению",
     "en": "Freight forwarding and customs clearance services"
   },
+  "contacts-selling": {
+    "ru": "Продажа фруктов и овощей",
+    "en": "Продажа фруктов и овощей"
+  },
+  "contacts-sergiy": {
+    "ru": "Сергей",
+    "en": "Sergiy"
+  },
+  "contacts-nat": {
+    "ru": "Наталья",
+    "en": "Nataly"
+  },
+  "contacts-dar": {
+    "ru": "Дарья",
+    "en": "Dariya"
+  },
+  "contacts-vital": {
+    "ru": "Виталий",
+    "en": "Vitaliy"
+  },
+  "contacts-phone-1": {
+    "ru": "+380672426141",
+    "en": "+380672426141"
+  },
+  "contacts-phone-2": {
+    "ru": "+380674851405",
+    "en": "+380674851405"
+  },
+  "contacts-phone-3": {
+    "ru": "+380938483414",
+    "en": "+380938483414"
+  },
+  "contacts-phone-4": {
+    "ru": "+380968405620",
+    "en": "+380968405620"
+  },
+  "contacts-email-title": {
+    "ru": "Почта",
+    "en": "Email"
+  },
+  "contacts-email": {
+    "ru": "fruitservicegroup2@gmail.com",
+    "en": "fruitservicegroup2@gmail.com"
+  },
+  "contacts-gas-serv": {
+    "ru": "Услуги газации фруктов и овощей",
+    "en": "Услуги газации фруктов и овощей"
+  },
+  "contacts-gas-exp": {
+    "ru": "Услуги по экспедированию грузов  и таможенному оформлению",
+    "en": "Услуги газации фруктов и овощей"
+  },
+  "contacts-socials": {
+    "ru": "Мы в социальных сетях",
+    "en": "Мы в социальных сетях"
+  },
+  "contacts-form-title": {
+    "ru": "Форма обратной связи",
+    "en": "Форма обратной связи"
+  },
+  "contacts-form-name": {
+    "ru": "Имя",
+    "en": "Name"
+  },
+  "contacts-form-phone": {
+    "ru": "Телефон",
+    "en": "Phone"
+  },
+  "contacts-form-mes": {
+    "ru": "Ваше сообщение",
+    "en": "Your message"
+  },
+  "contacts-form-send": {
+    "ru": "Отправить",
+    "en": "Send"
+  },
 }
