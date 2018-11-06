@@ -11,6 +11,7 @@ import ProductCarousel from './ProductCarousel';
 import ImageParallax from './ImageParallax';
 import Columns from './Columns';
 import TextSection from './TextSection';
+import Footer from './Footer';
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 
 import {svgSet1, svgSet2} from '../content-configs/content.js';
@@ -106,6 +107,7 @@ class App extends Component {
 					</TextSection>
 					<ImageParallax image="/images/content/5.jpg"/>
 					<TextSection/>
+					<Footer/>
 				</div>
 			</LanguageProvider>
 		);
