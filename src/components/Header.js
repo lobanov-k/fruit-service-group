@@ -14,7 +14,8 @@ class Header extends Component {
 	};
 
 	state = {
-		isScrolled: false
+		isScrolled: false,
+		isMobMenuOpened: false
 	};
 
 	componentDidMount() {
@@ -32,6 +33,8 @@ class Header extends Component {
 		});
 	};
 
+	toggleMobNav = () => this.setState({ isMobMenuOpened: !this.state.isMobMenuOpened });
+
 	render() {
 		const langList = Object.keys(localeList).map(value => (
 			{
@@ -43,19 +46,24 @@ class Header extends Component {
 		const { selected } = this.props;
 
 		return(
-			<header id="header" className={(this.state.isScrolled) ? "pinned" : ""}>
-				<div className="logoBlock">
+			<header id="header" className={`header ${(this.state.isScrolled) ? "header--pinned" : ""} ${(this.state.isMobMenuOpened) ? "header--menuOpened" : ""}`}>
+				<div className="header__logoBlock">
 					<a href="/" className="logo">
-						<img src="images/fruit-service-group-logo-min.png" alt="Fruit Service Group"/>
+						<img className="logo__img" src="images/fruit-service-group-logo-min.png" alt="Fruit Service Group"/>
 					</a>
 				</div>
-				<nav>
-					<ul>
-						<li><a href="#about"><Translator>header-about</Translator></a></li>
-						<li><a href="#product"><Translator>header-product</Translator></a></li>
-						<li><a href="#services"><Translator>header-services</Translator></a></li>
-						<li><a href="#contacts"><Translator>header-contacts</Translator></a></li>
-						<li>
+				<div className="header__burger" onClick={this.toggleMobNav}>
+					<div className="header__burgerLine"/>
+					<div className="header__burgerLine"/>
+					<div className="header__burgerLine"/>
+				</div>
+				<nav className="header__navigation">
+					<ul className="header__navList">
+						<li className="header__navItem"><a className="header__navLink" href="#about"><Translator>header-about</Translator></a></li>
+						<li className="header__navItem"><a className="header__navLink" href="#product"><Translator>header-product</Translator></a></li>
+						<li className="header__navItem"><a className="header__navLink" href="#services"><Translator>header-services</Translator></a></li>
+						<li className="header__navItem"><a className="header__navLink" href="#contacts"><Translator>header-contacts</Translator></a></li>
+						<li className="header__navItem">
 							<Select 
 								options={langList}
 								onChange={this.handleChange}

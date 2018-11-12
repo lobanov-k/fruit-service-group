@@ -1,7 +1,8 @@
 @import "../variables";
 @import "../mixins";
+@import "lang-select";
 
-header {
+.header {
   color: @colorLight;
   background-color: rgba(255, 255, 255, 0.38);
   position: fixed;
@@ -13,7 +14,7 @@ header {
   .justify-content(space-between);
   transition: all 0.5s ease-in-out;
 
-  &.pinned {
+  &.header--pinned {
     background-color: rgba(255, 255, 255, 1);
 
     a {
@@ -21,21 +22,15 @@ header {
     }
 
     .langSelect {
-      &__single-value {
-        color: @colorGreen;
-      }
+      .lengSelectorAlt();
+    }
 
-      &__menu {
-        background-color: @colorLight;
-      }
-
-      &__option {
-        color: @colorGreen;
-      }
+    .header__burgerLine {
+      background-color: @colorGreen;
     }
   }
 
-  .logoBlock {
+  &__logoBlock {
     background-color: @colorLight;
   }
 
@@ -43,82 +38,117 @@ header {
     padding: 27px 14px 21px 27px;
     display: block;
 
-    img {
+    &__img {
       height: 50px;
       width: auto;
     }
   }
 
-  nav {
+  &__navigation {
     .flex-display();
+  }
 
-    ul {
-      .flex-display();
+  &__navList {
+    .flex-display();
+  }
+
+  &__navItem {
+    list-style-type: none;
+    padding: 5px 17px;
+    .flex-display();
+    .align-items(center);
+  }
+
+  &__navLink {
+    color: @colorLight;
+    text-decoration: none;
+    .font(16px, 1.1, bold);
+    transition: color 0.5s ease-in-out;
+
+    &:hover {
+      color: @colorLinkAlt;
     }
+  }
 
-    li {
-      list-style-type: none;
-      padding: 5px 17px;
-      .flex-display();
-      .align-items(center);
-    }
+  &__burger {
+    display: none;
+    position: relative;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+  }
 
-    a {
-      color: @colorLight;
-      text-decoration: none;
-      .font(16px, 1.1, bold);
-      transition: color 0.5s ease-in-out;
+  &__burgerLine {
+    width: 100%;
+    height: 5px;
+    margin: 6px 0;
+    background-color: @colorGreen;
+    animation: all 0.3s ease-in-out;
+  }
 
-      &:hover {
-        color: @colorLinkAlt;
-      }
-    }
+  .langSelect {
+    .langSelectorStylesBasic();
   }
 
   @media @mediaTabletMobile {
-  }
-}
+    background-color: @colorLight;
+    color: @colorGreen;
 
-.langSelect {
-  cursor: pointer;
+    &__burger {
+      display: block;
+      margin-top: 15px;
+      margin-right: 15px;
+    }
 
-  &__control {
-    background: transparent;
-    border: none !important;
-    box-shadow: none;
-  }
+    &__navigation {
+      position: absolute;
+      animation: all 0.5s ease-in;
+      transform: translateX(100%);
+      top: 68px;
+      right: 0;
+      background-color: @colorLight;
+    }
 
-  &__value-container {
-    width: 40px;
-  }
+    &__navList {
+      .flex-direction(column);
+    }
 
-  &__single-value {
-    color: @colorLight;
-    transition: color 0.5s ease-in-out;
-  }
+    &__navLink {
+      color: @colorGreen;
+      padding: 6px 15px 10px 0;
+    }
 
-  &__indicator-separator {
-    display: none;
-  }
+    .logo {
+      padding: 15px;
 
-  &__dropdown-indicator svg {
-    fill: @colorLinkAlt;
-  }
+      &__img {
+        height: 35px;
+      }
+    }
 
-  &__menu {
-    background-color: rgba(255, 255, 255, 0.38);
-  }
+    .langSelect {
+      margin-left: -10px;
+      .lengSelectorAlt();
+    }
 
-  &__option {
-    opacity: 0.7;
-    background-color: transparent;
-  }
+    &.header--menuOpened {
+      .header__burgerLine {
+        &:first-child {
+          -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+          transform: rotate(-45deg) translate(-9px, 7px);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          -webkit-transform: rotate(45deg) translate(-8px, -8px);
+          transform: rotate(45deg) translate(-8px, -7px);
+        }
+      }
 
-  &__option--is-focused {
-    opacity: 1;
-  }
-
-  &__option--is-selected {
-    opacity: 1;
+      .header__navigation {
+        transform: translateX(0%);
+      }
+    }
   }
 }
