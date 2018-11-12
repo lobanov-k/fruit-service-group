@@ -26,8 +26,8 @@ class Hero extends Component {
         return (
             <div className="hero">
                 <div className="container">
-                    <h2><Translator>hero-carousel-subheader</Translator></h2>
-                    <h1><Translator>hero-carousel-header</Translator></h1>
+                    <h2 className="hero__h2"><Translator>hero-carousel-subheader</Translator></h2>
+                    <h1 className="hero__h1"><Translator>hero-carousel-header</Translator></h1>
                     <a href="#contacts" className="connectBtn btn">
                         <Translator>connect</Translator>
                     </a>
