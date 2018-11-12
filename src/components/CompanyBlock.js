@@ -10,7 +10,7 @@ export default function CompanyBlock() {
 				<div className="companyBlock">
 					<div className="container">
 						<div className="titleBlock">
-							<h2>
+							<h2 className="companyBlock__h2">
 								<Translator>company-header</Translator>
 							</h2>
 						</div>
