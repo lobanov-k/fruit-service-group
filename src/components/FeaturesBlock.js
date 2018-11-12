@@ -36,7 +36,7 @@ export default function FeaturesBlock(props) {
 			<div className="heroFeaturesBlock">
 			{
 				features.map((item) => (
-					<div className="heroFeatures" key={item.svg}>
+					<div className="heroFeature" key={item.svg}>
 						<img src={`../images/svg/${item.svg}.svg`} alt={<Translator>{item.text}</Translator>}/>
 						<Translator>{item.text}</Translator>
 					</div>
