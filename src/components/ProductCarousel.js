@@ -24,7 +24,23 @@ export default class ProductCarousel extends React.Component {
 			slidesToShow: 6,
 			className: "container",
 			infinite: false,
-			arrows: true
+			arrows: true,
+			responsive: [
+				{
+					breakpoint: 979,
+					settings: {
+						slidesToShow: 5,
+						slidesToScroll: 3
+					}
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				}
+			] 
 		};
 
 		return (

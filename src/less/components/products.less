@@ -105,4 +105,32 @@
   .slick-next:before {
     color: @colorGreen;
   }
+
+  @media @mediaTabletMobile {
+    .filterBtn {
+      margin-right: 20px;
+    }
+
+    .slick-slider {
+      margin-top: 30px;
+    }
+  }
+
+  @media @mediaMobile {
+    .filterBlock {
+      .justify-content(space-between);
+    }
+
+    .filterBtn {
+      margin-right: 5px;
+    }
+
+    .slick-next {
+      right: -10px;
+    }
+
+    .slick-prev {
+      left: -10px;
+    }
+  }
 }

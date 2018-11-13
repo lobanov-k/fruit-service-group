@@ -77,9 +77,15 @@ button {
   padding: 0 44px;
 }
 
-@media only screen and (max-width: 767px) {
+@media @mediaTabletMobile {
   .container {
     padding: 0 15px;
+  }
+
+  .heading {
+    &:after {
+      width: 100%;
+    }
   }
 }
 
