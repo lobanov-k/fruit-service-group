@@ -70,4 +70,28 @@
   &__formBtn {
     width: 100%;
   }
+
+  @media @mediaTabletMobile {
+    &__contactsBlock {
+      .flex-basis(50%);
+    }
+
+    &__formBlock {
+      .flex-basis(50%);
+    }
+
+    &__socials {
+      .flex-order(2);
+    }
+  }
+
+  @media @mediaMobile {
+    &__mainWrapper {
+      .flex-direction(column);
+    }
+
+    &__contactsBlock, &__formBlock  {
+      .flex-basis(100%);
+    }
+  }
 }
