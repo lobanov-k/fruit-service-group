@@ -4,28 +4,6 @@ import Slider from "react-slick";
 import {productCategories, productList} from '../content-configs/product-carousel';
 import Translator from './Translator';
 
-function NextArrow(props) {
-	const { className, style, onClick } = props;
-	return (
-	  <div
-		className={className}
-		style={{ ...style, display: "block"}}
-		onClick={onClick}
-	  />
-	);
-  }
-  
-  function PrevArrow(props) {
-	const { className, style, onClick } = props;
-	return (
-	  <div
-		className={className}
-		style={{ ...style, display: "block"}}
-		onClick={onClick}
-	  />
-	);
-  }
-
 export default class ProductCarousel extends React.Component {
 
 	state = {
@@ -43,8 +21,6 @@ export default class ProductCarousel extends React.Component {
 			className: "container",
 			infinite: false,
 			arrows: true,
-			nextArrow: <NextArrow className="nextArrow"/>,
-			prevArrow: <PrevArrow className="prevArrow"/>,
 			responsive: [
 				{
 					breakpoint: 979,
