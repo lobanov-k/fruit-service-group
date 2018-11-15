@@ -18,14 +18,25 @@ import {svgSet1, svgSet2} from '../content-configs/content.js';
 
 configureAnchors({offset: -120});
 
+const propTypes = {
+	initLang: PropTypes.string
+};
+
 class App extends Component {
+
 	static childContextTypes = {
 		lang: PropTypes.string,
 	};
 
 	state = {
-		lang: 'ru'
+		lang: ''
 	};
+
+	componentWillMount() {
+		let initialLang = 'ru';
+		if (!!this.props.initialLang) initialLang = this.props.initialLang;
+		this.setState({lang: initialLang});
+	}
 
 	getChildContext() {
 		return {
@@ -113,5 +124,7 @@ class App extends Component {
 		);
 	}
 }
+
+App.propTypes = propTypes;
 
 export default App;
