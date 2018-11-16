@@ -17,7 +17,10 @@ module.exports = env => {
     }));
 
     return {
-        entry: './src/index.js',
+        entry: {
+            client: './src/client.js',
+            bundle: './src/bundle.js'
+        },
         module: {
             rules: [
                 {
@@ -65,7 +68,7 @@ module.exports = env => {
         output: {
             path: __dirname + '/dist',
             publicPath: '/',
-            filename: 'bundle.js'
+            filename: '[name].js'
         },
         plugins: pluginsArray
     }
