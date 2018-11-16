@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
     children: PropTypes.node.isRequired,
-    title: PropTypes.string
+    title: PropTypes.node
 };
 
 export default function Columns(props) {
