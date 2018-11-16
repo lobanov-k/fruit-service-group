@@ -68,7 +68,7 @@ module.exports = env => {
         output: {
             path: __dirname + '/dist',
             publicPath: '/',
-            filename: '[name].js'
+            filename: 'js/[name].js'
         },
         plugins: pluginsArray
     }
