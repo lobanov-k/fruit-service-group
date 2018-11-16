@@ -5,10 +5,10 @@ function template(seo, initialState = {}, content = ""){
         scripts = ` <script>
             window.__STATE__ = ${JSON.stringify(initialState)}
         </script>
-        <script src="assets/client.js"></script>
+        <script src="js/client.js"></script>
         `;
     } else {
-        scripts = ` <script src="assets/bundle.js"> </script> `
+        scripts = ` <script src="js/bundle.js"> </script> `
     }
     let page = `<!DOCTYPE html>
         <html lang="en">
@@ -17,7 +17,7 @@ function template(seo, initialState = {}, content = ""){
                 <title> ${title} </title>
                 <meta description="${description}" />
                 <meta keywords="${keyWords}"/>
-                <link href="assets/style.css" rel="stylesheet">
+                <link type="text/css" rel="stylesheet" href="css/main.37ee3b5ebd9b3e0aca6b.css" />
             </head>
             <body>
                 <div class="content">
