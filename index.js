@@ -5,8 +5,10 @@ const express = require('express'),
 	seo = require('./views/content-configs/seo');
 
 // Serving static files
-app.use('/assets', express.static(path.resolve(__dirname, 'assets')));
-app.use('/media', express.static(path.resolve(__dirname, 'media')));
+app.use('/fonts', express.static(path.resolve(__dirname, 'dist/fonts')));
+app.use('/images', express.static(path.resolve(__dirname, 'dist/images')));
+app.use('/js', express.static(path.resolve(__dirname, 'dist/js')));
+app.use('/css', express.static(path.resolve(__dirname, 'dist/css')));
 
 // hide powered by express
 app.disable('x-powered-by');
