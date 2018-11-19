@@ -4,16 +4,17 @@ const express = require('express'),
 	path = require('path'),
 	seo = require('./views/content-configs/seo');
 
+app.use(express.static(path.resolve(__dirname, '/www')));
 // Serving static files
-app.use('/fonts', express.static(path.resolve(__dirname, 'dist/fonts')));
-app.use('/images', express.static(path.resolve(__dirname, 'dist/images')));
-app.use('/js', express.static(path.resolve(__dirname, 'dist/js')));
-app.use('/css', express.static(path.resolve(__dirname, 'dist/css')));
+app.use('/fonts', express.static(path.resolve(__dirname, '/fonts')));
+app.use('/images', express.static(path.resolve(__dirname, '/images')));
+app.use('/js', express.static(path.resolve(__dirname, '/js')));
+app.use('/css', express.static(path.resolve(__dirname, '/css')));
 
 // hide powered by express
 app.disable('x-powered-by');
 // start the server
-app.listen(process.env.PORT || 3000);
+app.listen(6666);
 
 const ssr = require('./views/server');
 
