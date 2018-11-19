@@ -17,7 +17,7 @@ function template(seo, initialState = {}, content = ""){
                 <title> ${title} </title>
                 <meta description="${description}" />
                 <meta keywords="${keyWords}"/>
-                <link type="text/css" rel="stylesheet" href="css/main.37ee3b5ebd9b3e0aca6b.css" />
+                <link type="text/css" rel="stylesheet" href="css/bundle.css" />
             </head>
             <body>
                 <div class="content">
