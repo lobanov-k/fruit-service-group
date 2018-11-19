@@ -1,20 +1,10 @@
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = env => {
     const isProduction = env.production;
-    const pluginsArray = [
-        new webpack.HotModuleReplacementPlugin(),
-        new CopyWebpackPlugin([
-            { from: 'src/images', to:'images' }
-        ])
-    ];
-
-    if (isProduction) pluginsArray.push(new MiniCssExtractPlugin({
-        filename: !isProduction ? '[name].css' : '[name].[hash].css',
-        chunkFilename: !isProduction ? '[id].css' : '[id].[hash].css',
-    }));
 
     return {
         entry: {
@@ -30,17 +20,10 @@ module.exports = env => {
                 },
                 {
                     test: /\.(less|css)$/,
-                    use: [
-                        {
-                            loader: isProduction ? MiniCssExtractPlugin.loader : 'style-loader'
-                        },
-                        {
-                            loader: 'css-loader'
-                        },
-                        {
-                            loader: 'less-loader'
-                        }
-                    ]
+                    use: ExtractTextPlugin.extract({
+                        fallback: 'style-loader',
+                        use: ['css-loader', 'less-loader']
+                    })
                 },
                 {
                     test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
@@ -66,10 +49,18 @@ module.exports = env => {
             extensions: ['*', '.js', '.jsx']
         },
         output: {
-            path: __dirname + '/dist',
+            path: __dirname + '/www',
             publicPath: '/',
             filename: 'js/[name].js'
         },
-        plugins: pluginsArray
+        plugins: [
+            new webpack.HotModuleReplacementPlugin(),
+            new CopyWebpackPlugin([
+                { from: 'src/images', to:'images' }
+            ]),
+            new ExtractTextPlugin({
+                filename: 'css/[name].css'
+            })
+        ]
     }
 };
