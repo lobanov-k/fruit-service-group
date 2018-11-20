@@ -1,5 +1,5 @@
-function template(seo, initialState = {}, content = ""){
-    const {title, description, keyWords} = seo;
+function template(seo, initialState = {initialLang: 'en'}, content = "") {
+    const {title, description, keyWords} = seo[initialState.initialLang];
     let scripts = '';
     if(content){
         scripts = ` <script>
@@ -11,7 +11,7 @@ function template(seo, initialState = {}, content = ""){
         scripts = ` <script src="js/bundle.js"> </script> `
     }
     let page = `<!DOCTYPE html>
-        <html lang="en">
+        <html lang="${initialState.initialLang}">
             <head>
                 <meta charset="utf-8">
                 <title> ${title} </title>
