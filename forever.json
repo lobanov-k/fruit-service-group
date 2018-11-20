@@ -1,0 +1,8 @@
+{
+    "uid": "app",
+    "watch": true,
+    "watchDirectory": "src/",
+    "script": "index.js",
+    "spinSleepTime": "30000",
+    "minUptime": "31000"
+}

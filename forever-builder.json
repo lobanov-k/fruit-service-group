@@ -1,0 +1,7 @@
+{
+    "uid": "build",
+    "watch": true,
+    "watchDirectory": "src/",
+    "script": "build.js",
+    "command": "node"
+}
