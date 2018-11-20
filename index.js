@@ -21,13 +21,13 @@ const ssr = require('./views/server');
 // server rendered home page
 app.get('/', (req, res) => {
 	const content = ssr();
-	const response = template(seo, {}, content);
+	const response = template(seo, {initialLang: 'ru'}, content);
 	res.setHeader('Cache-Control', 'assets, max-age=604800');
 	res.send(response);
 });
-app.get('en', (req, res) => {
-	const content = ssr();
-	const response = template(seo, {lang: 'en'}, content);
+app.get('/en', (req, res) => {
+	const content = ssr({initialLang: 'en'});
+	const response = template(seo, {initialLang: 'en'}, content);
 	res.setHeader('Cache-Control', 'assets, max-age=604800');
 	res.send(response);
 });
