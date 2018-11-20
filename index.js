@@ -25,9 +25,16 @@ app.get('/', (req, res) => {
 	res.setHeader('Cache-Control', 'assets, max-age=604800');
 	res.send(response);
 });
+app.get('en', (req, res) => {
+	const content = ssr();
+	const response = template(seo, {lang: 'en'}, content);
+	res.setHeader('Cache-Control', 'assets, max-age=604800');
+	res.send(response);
+});
 
-app.get('/client', (req, res) => {
-	let response = template('Client Side Rendered page');
+app.use(function(req, res){
+	const notFound = require('./views/404.js');
+	const response = notFound();
 	res.setHeader('Cache-Control', 'assets, max-age=604800');
 	res.send(response);
 });
