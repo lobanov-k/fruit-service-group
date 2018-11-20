@@ -4,10 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "npx nodemon index.js --watch src --delay 30",
     "start-dev": "webpack-dev-server --config ./webpack.dev.js",
     "build": "webpack --env.production --config webpack.prod.js",
     "babel": "babel src -d views"
+  },
+  "nodemonConfig": {
+    "events": {
+      "restart": "npm run babel & npm run build",
+      "watch": "src/"
+    }
   },
   "keywords": [],
   "author": "",
@@ -42,6 +48,7 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "nodemon": "^1.18.6",
     "prop-types": "^15.6.2",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
