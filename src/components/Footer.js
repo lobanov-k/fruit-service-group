@@ -8,12 +8,44 @@ const propTypes = {};
 
 export default class Footer extends React.Component {
 
+    state = {
+        name: '',
+        phone: '',
+        message: ''
+    };
+
     static contextTypes = {
         lang: PropTypes.string.isRequired
     };
 
-    render() {
+    proceedSubmit = event => {
+        event.preventDefault();
+        fetch('/request', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(this.state)
+        });
+    };
 
+    handleNameChange = event => {
+        const {value} = event.target;
+        if (value.length > 0) this.setState({name: value});
+    };
+    
+    handleNumberChange = event => {
+        const {value} = event.target;
+        if (value.length > 0 && /^[-+\d\s()]{1,}$/.test(value)) this.setState({phone: value});
+    };
+
+    handleMessageChange = event => {
+        const {value} = event.target;
+        this.setState({message: value});
+    };
+
+    render() {
         return (
             <React.Fragment>
                 <ScrollableAnchor id={"contacts"}>
@@ -96,21 +128,27 @@ export default class Footer extends React.Component {
                                     <p className="footer__title">
                                         <Translator>contacts-form-title</Translator>
                                     </p>
-                                    <form className="footer__form">
+                                    <form className="footer__form" onSubmit={this.proceedSubmit}>
                                         <input 
                                             name="name" 
                                             type="text" 
                                             placeholder={dictionary["contacts-form-name"][this.context.lang]} 
-                                            className="footer__formInput"/>
+                                            className="footer__formInput"
+                                            value={this.state.name}
+                                            onChange={this.handleNameChange}/>
                                         <input 
                                             name="phone"
                                             type="text"
                                             placeholder={dictionary["contacts-form-phone"][this.context.lang]}
-                                            className="footer__formInput"/>
+                                            className="footer__formInput"
+                                            value={this.state.phone}
+                                            onChange={this.handleNumberChange}/>
                                         <textarea 
                                             name="message"
                                             placeholder={dictionary["contacts-form-mes"][this.context.lang]}
-                                            className="footer__formInput footer__formInput--textArea"/>
+                                            className="footer__formInput footer__formInput--textArea"
+                                            value={this.state.message}
+                                            onChange={this.handleMessageChange}/>
                                         <button className="yellowBtn footer__formBtn">
                                             <Translator>contacts-form-send</Translator>
                                         </button>
