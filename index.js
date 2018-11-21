@@ -34,7 +34,7 @@ app.get('/en', (req, res) => {
 	res.setHeader('Cache-Control', 'assets, max-age=604800');
 	res.send(response);
 });
-app.post('/request', (req, res) => {
+app.post('/order', (req, res) => {
 	const {name, phone, message} = req.body;
 	console.log(name, phone, message);
 	res.send('success');

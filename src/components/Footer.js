@@ -20,7 +20,7 @@ export default class Footer extends React.Component {
 
     proceedSubmit = event => {
         event.preventDefault();
-        fetch('/request', {
+        fetch('/order', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
