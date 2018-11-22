@@ -1,9 +1,15 @@
-const express = require('express'),
-	app = express(),
-	template = require('./views/template')
-	path = require('path'),
-	seo = require('./views/content-configs/seo'),
-	var helmet = require('helmet');
+const express = require('express');
+const app = express();
+const path = require('path');
+const helmet = require('helmet');
+const expressValidator = require('express-validator');
+const { check, oneOf, validationResult } = require('express-validator/check');
+
+const template = require('./views/template');
+const seo = require('./views/content-configs/seo');
+const { createOrder } = require('./order/order-controller');
+
+console.log(createOrder);
 
 app.use(express.static(path.resolve(__dirname, '/www')));
 // Serving static files
@@ -13,8 +19,9 @@ app.use('/images', express.static(path.resolve(__dirname, '/images')));
 app.use('/js', express.static(path.resolve(__dirname, '/js')));
 app.use('/css', express.static(path.resolve(__dirname, '/css')));
 
-app.use(express.json());       // to support JSON-encoded bodies
-app.use(express.urlencoded()); // to support URL-encoded bodies
+app.use(express.json());
+app.use(express.urlencoded());
+app.use(expressValidator()); 
 
 // start the server
 app.listen(6666);
@@ -34,11 +41,23 @@ app.get('/en', (req, res) => {
 	res.setHeader('Cache-Control', 'assets, max-age=604800');
 	res.send(response);
 });
-app.post('/order', (req, res) => {
-	const {name, phone, message} = req.body;
-	console.log(name, phone, message);
-	res.send('success');
-});
+app.post('/order',
+	// validation
+	oneOf([
+		check('name', 'Name must be a string').isString(),
+		check('phone', 'Phone must be a string').isString(),
+		check('message', 'Message must be a string').isString()
+	]),
+	(req, res, next) => {
+		try {
+			validationResult(req).throw();
+			createOrder(req);
+			res.status(200).json({});
+		} catch (err) {
+			res.status(422).json({"error": err.message});
+		}
+	}
+);
 
 app.use(function(req, res){
 	const notFound = require('./views/404.js');
