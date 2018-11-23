@@ -20,6 +20,7 @@ export default class Footer extends React.Component {
 
     proceedSubmit = event => {
         event.preventDefault();
+        if (!this.state.message && !this.state.name && !this.state.phone) return;
         fetch('/order', {
             method: 'POST',
             headers: {
@@ -32,12 +33,12 @@ export default class Footer extends React.Component {
 
     handleNameChange = event => {
         const {value} = event.target;
-        if (value.length > 0) this.setState({name: value});
+        this.setState({name: value});
     };
     
     handleNumberChange = event => {
         const {value} = event.target;
-        if (value.length > 0 && /^[-+\d\s()]{1,}$/.test(value)) this.setState({phone: value});
+        if (/^[-+\d\s()]{1,}$/.test(value)) this.setState({phone: value});
     };
 
     handleMessageChange = event => {
