@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 
 // start the server
-app.listen(6666);
+app.listen(3000);
 
 const ssr = require('./views/server');
 
