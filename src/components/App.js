@@ -104,16 +104,10 @@ class App extends Component {
 							<Translator>services-transport-header</Translator>
 						</h3>
 						<div className="text">
-							<Translator>services-column-text-1</Translator>
+							<Translator>services-transport-text-1</Translator>
 						</div>
 						<div className="text">
-							<Translator>services-column-text-2</Translator>
-						</div>
-						<div className="text">
-							<Translator>services-column-text-3</Translator>
-						</div>
-						<div className="text">
-							<Translator>services-column-text-4</Translator>
+							<Translator>services-transport-text-2</Translator>
 						</div>
 					</TextSection>
 					<ImageParallax image="/images/content/5.jpg"/>
