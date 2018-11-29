@@ -5,7 +5,7 @@ export default {
   },
   "hero-carousel-subheader": {
     "ru": "Оптовые поставки и газация фруктов и овощей",
-    "en": "Freight forwarding and customs clearance services"
+    "en": "Wholesale and service of the repining of fruit and vegetables"
   },
   "connect": {
     "ru": "Связаться",
@@ -13,23 +13,23 @@ export default {
   },
   "hero-features-1": {
     "ru": "Выгодные цены",
-    "en": "Competitive prices"
+    "en": "Favorable  price"
   },
   "hero-features-2": {
     "ru": "Широкий ассортимент",
-    "en": "A large variety of fruit and vegetables available"
+    "en": "A large variety of fruit and vegetables"
   },
   "hero-features-3": {
     "ru": "Оперативная обработка и исполнение заказа",
-    "en": "Prompt processing, completion and shipping of your order"
+    "en": "Prompt processing and execution of the order"
   },
   "hero-features-4": {
     "ru": "Своевременная доставка",
-    "en": "Quick delivery"
+    "en": "Timely delivery"
   },
   "hero-features-5": {
     "ru": "Индивидуальный подход к каждому клиенту",
-    "en": "Services tailored for each individual customer"
+    "en": "Personalized service to each customer"
   },
   "hero-features-6": {
     "ru": "Высочайшее качество",
@@ -37,11 +37,11 @@ export default {
   },
   "header-about": {
     "ru": "О Компании",
-    "en": "About"
+    "en": "About company"
   },
   "header-product": {
     "ru": "Продукция",
-    "en": "Product"
+    "en": "Products"
   },
   "header-services": {
     "ru": "Услуги",
@@ -52,28 +52,28 @@ export default {
     "en": "Contacts"
   },
   "company-header": {
-    "ru": "Наша Комания",
+    "ru": "Наша компания",
     "en": "Our Company"
   },
   "company-text-main": {
-    "ru": "FSG - надежный поставщик фруктов и овощей. Мы поставляем самые свежие фрукты и овощи неизменно отличного качества. Основная деятельность компании - оптовая продажа бананов по всей Украине. ",
-    "en": "FSG is one of the first companies in Ukraine to provide a comprehensive range of services for the ripening of fruit and vegetables. One of the main emphases is the provision of ripening bananas."
+    "ru": "FSG надежный поставщик фруктов и овощей. Мы поставляем самые свежие фрукты и овощи неизменно отличного качества. Основная деятельность компании - оптовая продажа бананов, по всей Украине.",
+    "en": "FSG is a reliable supplier of fruit and vegetables. We supply the freshest fruit and vegetables and we are able to provide the highest quality. The main areas of activity is the wholesale distribution of bananas throughout Ukraine."
   },
   "company-more": {
     "ru": "Узнать больше",
-    "en": "Get more"
+    "en": "Find our more"
   },
   "company-info": {
-    "ru": "Наша компания одна из первых в Украине начала предлагать услугу по дозреванию фруктов и овощей",
-    "en": "Get more"
+    "ru": "Наша компания одна из первых начала предлагать услуги по дозреванию фруктов и овощей.",
+    "en": "The company was one of the first to offer services for the ripening of fruit and vegetables."
   },
   "info-block-text-1": {
     "ru": "В нашем распоряжении новейшие камеры газации/дозревания, которые позволяют осуществлять и контролировать процесс созревания бананов в автоматическом режиме.",
-    "en": "Get more"
+    "en": "At our disposal we have  the latest gassing / ripening chambers, which allow us to carry out and control the process of ripening bananas in automatic mode."
   },
   "info-block-text-2": {
     "ru": "Наличие самого современного оборудования  и  соблюдение всех правил хранения обеспечивает высокое качество поставляемых товаров.",
-    "en": "Get more"
+    "en": "Presence the most modern equipment and observance of all storage rules we ensure high quality of the delivered goods."
   },
   "product-head": {
     "ru": "Продукция",
@@ -85,7 +85,7 @@ export default {
   },
   "product-text-2": {
     "ru": "Наши поставщики - крупнейшие производители и экспортеры из разных стран мира.",
-    "en": " Our comprehensive list of suppliers includes some of the largest producers and exporters from all the world."
+    "en": "Our comprehensive list of suppliers includes the largest manufacturers and exporters from all the world."
   },
   "banana": {
     "ru": "Банан",
@@ -149,55 +149,63 @@ export default {
   },
   "services-text-1": {
     "ru": "FSG одна из первых компаний в Украине, которая предоставляет комплексный спектр услуг по дозреванию фруктов и овощей.",
-    "en": "FSG is one of the first companies in Ukraine to provide a comprehensive range of services for the ripening of fruit and vegetables."
+    "en": "FSG is one of the first companies in Ukraine that provides a comprehensive range of services for the ripening of fruit and vegetables."
   },
   "services-text-2": {
     "ru": "Одним из основных направлений является услуга по газация бананов.",
-    "en": "One of the main emphases is the provision of ripening bananas."
+    "en": "One of the main direction is the service of the ripening of bananas."
   },
   "services-column-title": {
     "ru": "Услуги по дозреванию фруктов и овощей",
-    "en": "We offer a wide selection of fruit and vegetables"
+    "en": "The service of the ripening of the fruits and vegetables"
   },
   "services-column-text-1": {
-    "ru": "Газация бананов - это процесс искусственного дозревания плодов, который позволяет им приобрести все необходимые свойства и качества: вкус, запах, внутреннюю и внешнюю структуру.",
-    "en": "Aeration of bananas is the process of ripening fruit in a controlled environment, which allows our bananas to acquire all the essential properties and qualities — taste, smell and texture. "
+    "ru": "Газация бананов - это процесс искусственного дозревания плодов, который позволяет банану приобрести все необходимые свойства и качества-вкус, запах, внутреннюю и внешнюю структуру.",
+    "en": "Aeration of bananas is the process of artificial ripening of fruit, which allows a banana to acquire all the necessary properties and qualities — taste, smell, internal and external structure."
   },
   "services-column-text-2": {
     "ru": "Дозревание происходит в специальных камерах при определенном климатическом режиме.",
-    "en": "This occurs in special greenhouses in a carefully controlled climate."
+    "en": "This occurs in special chambers under certain climatic conditions."
   },
   "services-column-text-3": {
-    "ru": "К вашим услугам 22 современных камеры для дозревания бананов, в которых одновременно могут находиться 24 000 коробок бананов.",
-    "en": "At your service are 22 modern greenhouses for ripening bananas. Which is the equivalent of 24,000 boxes of bananas"
+    "ru": "К Вашим услугам 22 современных камеры для дозаривания бананов. В которых одновременно могут находиться 24 000 коробок бананов.",
+    "en": "At your service 22 modern chambers for ripening bananas. In which at the same time could be 24,000 boxes of bananas."
   },
   "services-column-text-4": {
     "ru": "Используя новейшие технологии и обученный высококвалифицированный персонал, мы обеспечим наилучший результат дозревания и хранения ваших фруктов и овощей.",
-    "en": "Using the latest technology and highly trained, fully qualified personnel, we will ensure the best results for the ripening and storage of your fruit and vegetables."
+    "en": "Using the latest technology and trained highly qualified personnel, we will ensure the best result of ripening and storage of your fruit and vegetables."
   },
   "services-transport-header": {
-    "ru": "Услуги по экспедированию грузов и таможенному оформлению",
-    "en": "Freight forwarding and customs clearance services"
+    "ru": "Услуги по экспедированию грузов и таможенному оформлению.",
+    "en": "Freight forwarding and customs clearance services."
+  },
+  "services-transport-text-1": {
+    "ru": "Наша компания предлагает полный комплекс таможенных услуг, связанных с организацией транспортировки и экспедирования грузов. Подготовка сопроводительных и разрешительных документов - это начальный этап в оформлении груза, в которой недопустимо причинение ошибки.",
+    "en": "Our company offers a full range of customs services related to the organization of transportation and freight forwarding. Preparation of accompanying documents and permits - this is the first stage of the cargo execution, in which mistakes is unacceptable."
+  },
+  "services-transport-text-2": {
+    "ru": "Мы выполняем перевозку грузов и экспедирование в сроки установленные клиентами. Вы можете не беспокоиться за сохранность Вашего груза, ответственный, специально подобранный персонал компании выполнит работу на высшем уровне.",
+    "en": "We carry out transportation of goods and forwarding in terms set by customers. You could not worry about the safety of your cargo, the responsible, handpicked staff of the company will perform the work on the highest level."
   },
   "contacts-selling": {
     "ru": "Продажа фруктов и овощей",
-    "en": "Продажа фруктов и овощей"
+    "en": "Sales of fruits and vegetables"
   },
   "contacts-sergiy": {
     "ru": "Сергей",
-    "en": "Sergiy"
+    "en": "Sergey"
   },
   "contacts-nat": {
     "ru": "Наталья",
-    "en": "Nataly"
+    "en": "Natalya"
   },
   "contacts-dar": {
     "ru": "Дарья",
-    "en": "Dariya"
+    "en": "Daria"
   },
   "contacts-vital": {
     "ru": "Виталий",
-    "en": "Vitaliy"
+    "en": "Vitalii"
   },
   "contacts-phone-1": {
     "ru": "+380672426141",
@@ -225,19 +233,19 @@ export default {
   },
   "contacts-gas-serv": {
     "ru": "Услуги газации фруктов и овощей",
-    "en": "Услуги газации фруктов и овощей"
+    "en": "The service of the ripening of the fruits and vegetables"
   },
   "contacts-gas-exp": {
-    "ru": "Услуги по экспедированию грузов  и таможенному оформлению",
-    "en": "Услуги газации фруктов и овощей"
+    "ru": "Услуги по экспедированию грузов и таможенному оформлению",
+    "en": "Freight forwarding and customs clearance services"
   },
   "contacts-socials": {
     "ru": "Мы в социальных сетях",
-    "en": "Мы в социальных сетях"
+    "en": "Socials"
   },
   "contacts-form-title": {
     "ru": "Форма обратной связи",
-    "en": "Форма обратной связи"
+    "en": "Feedback form"
   },
   "contacts-form-name": {
     "ru": "Имя",
